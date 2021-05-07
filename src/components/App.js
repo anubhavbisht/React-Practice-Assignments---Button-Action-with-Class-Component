@@ -5,13 +5,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      prop: "None",
+      message: "",
     };
   }
   change() {
     console.log("hello");
     this.setState({
-      prop: "block",
+      message:
+        "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy",
     });
   }
   render() {
@@ -20,10 +21,7 @@ class App extends Component {
         <button id="click" onClick={() => this.change()}>
           Click
         </button>
-        <p id="para" style={{ display: this.state.prop }}>
-          Hello, I've learnt to use the full-stack evaluation tool. This makes
-          me so happy
-        </p>
+        <p id="para">{this.state.message}</p>
       </div>
     );
   }
